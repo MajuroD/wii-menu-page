@@ -33,7 +33,7 @@
                 flex-wrap: wrap;
                 list-style-type: none;
             }
-            main ul.navigation li {
+            main ul. li {
                 position: relative;
                 overflow: hidden;
                 width: calc(25% - 0.8rem);
@@ -50,7 +50,7 @@
                 background-image: repeating-radial-gradient(circle at 14% 30%, white, rgba(0, 0, 0, 0.12) 0.0008px);
                 color: rgba(0, 0, 0, 0.6);
             }
-            main ul.navigation li:before {
+            main ul. li:before {
                 content: "";
                 background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.02)), linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.12));
                 background-size: 100% 8px, cover;
@@ -335,30 +335,71 @@
     <body>
         <main>
             <ul class="navigation">
-                <li>
-                    <!-- make sure this link matches the ID of the popup you want to display -->
-                    <a href="#container-1">
-                        <img src="https://64.media.tumblr.com/57cf461a1819e5f240894118d1d0c568/d662040e3a2b8722-26/s400x600/c04c16872971599bb3c749bfa29c7d561c736247.pnj" alt="empty CD wii menu placeholder" />
-                    </a>
-                </li>
-                <li>
-                    <a href="#container-2">
-                        <img src="https://64.media.tumblr.com/077b3fa310d0f638c9cc671af80131dc/d662040e3a2b8722-93/s400x600/20eca28477dbe64b8dfc42898ffc8b7e9d7098b2.pnj" alt="mii background image" />
-                    </a>
-                </li>
-                <li>
-                    <a href="#container-3"><img src="https://64.media.tumblr.com/4acf7d6703348eb3de2d6f422eac02b8/d28e227eb623ad41-cc/s1280x1920/89820b9bf56d7d7e0448b940fa4727a5a32129dc.jpg" alt="wii shop channel"></a>
-                </li> 
-                <!-- or if you do not want a popup, you can just make a regular link -->
-                <li>
-                    <a href="https://eggdesign.tumblr.com"><img src="https://64.media.tumblr.com/28ae4ac4079501d6efa5fc5518588e69/d28e227eb623ad41-a4/s1280x1920/3d4522bda6043bf90af3a0114e79038863c79b85.pnj" alt="check mii out channel"></a>
-                </li>
-                <!-- if you want empty/unused sections, just leave empty <li>. this will have a "WII" text placeholder and a static background  -->
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+
+    <li>
+        <a href="#opening-channel">
+            <img src="https://via.placeholder.com/400x200?text=Opening" alt="Opening Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#geography-channel">
+            <img src="https://via.placeholder.com/400x200?text=Geography" alt="Geography Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#history-channel">
+            <img src="https://via.placeholder.com/400x200?text=History" alt="History Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#culture1-channel">
+            <img src="https://via.placeholder.com/400x200?text=Family+Land+Clan" alt="Culture 1 Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#culture2-channel">
+            <img src="https://via.placeholder.com/400x200?text=Relationships+Work" alt="Culture 2 Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#celebrations-channel">
+            <img src="https://via.placeholder.com/400x200?text=Celebrations" alt="Celebrations Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#food-channel">
+            <img src="https://via.placeholder.com/400x200?text=Food+Clothing+Tattoos" alt="Food Clothing Tattoos Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#language-channel">
+            <img src="https://via.placeholder.com/400x200?text=Language" alt="Language Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#places-channel">
+            <img src="https://via.placeholder.com/400x200?text=Places+to+Visit" alt="Places to Visit Channel" />
+        </a>
+    </li>
+
+    <li>
+        <a href="#conclusion-channel">
+            <img src="https://via.placeholder.com/400x200?text=Conclusion" alt="Conclusion Channel" />
+        </a>
+    </li>
+
+    <li></li>
+    <li></li>
+
+</ul>
           
             <!-- make sure this id matches the value of the "button" that will open this popup  -->
             <div id="container-1" class="content full">
