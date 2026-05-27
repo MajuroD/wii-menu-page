@@ -203,6 +203,47 @@
     display: block;
     margin: 0 auto;
 }
+           .channel-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.channel-layout .channel-screen-img {
+    width: 45%;
+    max-width: 700px;
+    margin: 0;
+}
+
+.option-menu {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.option-button {
+    width: 85%;
+    min-height: 58px;
+    border-radius: 2rem;
+    border: 3px solid skyblue;
+    background: linear-gradient(to bottom, white 65%, #d8e8ef);
+    color: #222;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.18);
+}
+
+.option-button:hover {
+    transform: scale(1.05);
+    border-color: deepskyblue;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.28);
+}
            .title-screen {
     position: fixed;
     inset: 0;
@@ -499,8 +540,16 @@
            <div id="opening-channel" class="content full">
     <div class="container">
         <header></header>
-        <div class="wii">
-    <img src="opening.png" alt="Opening Channel" class="channel-screen-img" />
+<div class="wii">
+    <div class="channel-layout">
+        <img src="opening.png" alt="Opening Channel" class="channel-screen-img" />
+
+        <div class="option-menu">
+            <button class="option-button">My Hometown</button>
+            <button class="option-button">More Than Scenery</button>
+            <button class="option-button">Today’s Journey</button>
+        </div>
+    </div>
 </div>
         <div class="bottom">
             <a href="#" class="button">
