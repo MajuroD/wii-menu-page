@@ -203,6 +203,61 @@
     display: block;
     margin: 0 auto;
 }
+           .title-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.title-screen.hidden {
+    display: none;
+}
+
+.title-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.title-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.title-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.title-overlay p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.enter-button {
+    font-size: 1.4rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 2rem;
+    border: 4px solid skyblue;
+    background: linear-gradient(to bottom, white 65%, #d8e8ef);
+    color: #222;
+    cursor: pointer;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.enter-button:hover {
+    transform: scale(1.06);
+    border-color: deepskyblue;
+}
             .full header:before {
                 content: "";
                 background: white;
@@ -359,6 +414,19 @@
         </style>
     </head>
     <body>
+
+    <div id="title-screen" class="title-screen">
+        <video id="title-video" class="title-video" autoplay muted loop playsinline>
+            <source src="title-screen.mp4" type="video/mp4">
+        </video>
+
+        <div class="title-overlay">
+            <h1>我的家鄉：馬紹爾群島</h1>
+            <p>My Hometown: The Marshall Islands</p>
+            <button id="enter-button" class="enter-button">Enter Wii Menu</button>
+        </div>
+    </div>
+
         <main>
            <ul class="navigation">
 
@@ -639,5 +707,25 @@
                 </a>
             </div>
         </footer>
+        <script>
+            const titleScreen = document.getElementById("title-screen");
+            const enterButton = document.getElementById("enter-button");
+            const titleVideo = document.getElementById("title-video");
+            const homeButton = document.querySelector(".button-cont .button");
+
+            titleVideo.loop = true;
+
+            enterButton.addEventListener("click", function () {
+                titleScreen.classList.add("hidden");
+                titleVideo.pause();
+            });
+
+            homeButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                titleScreen.classList.remove("hidden");
+                titleVideo.currentTime = 0;
+                titleVideo.play();
+            });
+        </script>
     </body>
 </html>
