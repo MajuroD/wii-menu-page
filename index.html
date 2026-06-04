@@ -244,6 +244,52 @@
     border-color: deepskyblue;
     box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.28);
 }
+           .option-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.subtopic-card {
+    width: 70%;
+    max-width: 900px;
+    margin: 120px auto 0 auto;
+    background: white;
+    border-radius: 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    border: 3px solid #ddd;
+}
+
+.subtopic-card h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.subtopic-card p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+.keyword-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.keyword {
+    background: #eef8ff;
+    border: 2px solid skyblue;
+    border-radius: 2rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
            .title-screen {
     position: fixed;
     inset: 0;
@@ -740,10 +786,10 @@
         <img src="language.png" alt="Language Channel" class="channel-screen-img" />
 
         <div class="option-menu">
-          <button class="option-button">抓關鍵字</button>
-    <button class="option-button">問題詞</button>
-    <button class="option-button">語言和溝通</button>
-    <button class="option-button">Iakwe</button>
+            <a href="#language-keywords" class="option-button">抓關鍵字</a>
+            <a href="#language-question-words" class="option-button">問題詞</a>
+            <a href="#language-communication" class="option-button">語言和溝通</a>
+            <a href="#language-iakwe" class="option-button">Iakwe</a>
         </div>
     </div>
 </div>
@@ -759,7 +805,130 @@
         </div>
     </div>
 </div>
+<div id="language-keywords" class="content full">
+    <div class="container">
+        <header></header>
 
+        <div class="subtopic-card">
+            <h1>抓關鍵字</h1>
+            <p>我聽中文的時候，不一定每一個字都聽得懂。</p>
+            <p>所以我會先抓重要的關鍵字，幫助我了解大概的意思。</p>
+
+            <div class="keyword-row">
+                <span class="keyword">今天</span>
+                <span class="keyword">明天</span>
+                <span class="keyword">哪裡</span>
+                <span class="keyword">為什麼</span>
+                <span class="keyword">吃飯</span>
+                <span class="keyword">上課</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="#language-channel" class="button">
+                <span class="corner"></span>
+                <span class="text">返回語言</span>
+            </a>
+            <a href="#language-question-words" class="button">
+                <span class="corner"></span>
+                <span class="text">下一個</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="language-question-words" class="content full">
+    <div class="container">
+        <header></header>
+
+        <div class="subtopic-card">
+            <h1>問題詞</h1>
+            <p>問題詞可以幫助我知道對方想問什麼。</p>
+            <p>聽到問題詞以後，我比較容易知道問題的方向。</p>
+
+            <div class="keyword-row">
+                <span class="keyword">誰</span>
+                <span class="keyword">什麼</span>
+                <span class="keyword">哪裡</span>
+                <span class="keyword">什麼時候</span>
+                <span class="keyword">為什麼</span>
+                <span class="keyword">怎麼</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="#language-channel" class="button">
+                <span class="corner"></span>
+                <span class="text">返回語言</span>
+            </a>
+            <a href="#language-communication" class="button">
+                <span class="corner"></span>
+                <span class="text">下一個</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="language-communication" class="content full">
+    <div class="container">
+        <header></header>
+
+        <div class="subtopic-card">
+            <h1>語言和溝通</h1>
+            <p>我覺得語言不只是文法。</p>
+            <p>語言也是一種溝通方式，讓我和家人、文化、家鄉，還有台灣連在一起。</p>
+
+            <div class="keyword-row">
+                <span class="keyword">家人</span>
+                <span class="keyword">文化</span>
+                <span class="keyword">家鄉</span>
+                <span class="keyword">台灣</span>
+                <span class="keyword">溝通</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="#language-channel" class="button">
+                <span class="corner"></span>
+                <span class="text">返回語言</span>
+            </a>
+            <a href="#language-iakwe" class="button">
+                <span class="corner"></span>
+                <span class="text">下一個</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="language-iakwe" class="content full">
+    <div class="container">
+        <header></header>
+
+        <div class="subtopic-card">
+            <h1>Iakwe</h1>
+            <p>Iakwe 是馬紹爾語的「你好」。</p>
+            <p>它不只是打招呼，也有愛和尊重的意思。</p>
+
+            <div class="keyword-row">
+                <span class="keyword">你好</span>
+                <span class="keyword">愛</span>
+                <span class="keyword">尊重</span>
+                <span class="keyword">文化</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            <a href="#language-channel" class="button">
+                <span class="corner"></span>
+                <span class="text">返回語言</span>
+            </a>
+            <a href="#places-channel" class="button">
+                <span class="corner"></span>
+                <span class="text">下一個頻道</span>
+            </a>
+        </div>
+    </div>
+</div>
 <div id="places-channel" class="content full">
     <div class="container">
         <header></header>
