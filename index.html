@@ -143,6 +143,18 @@
                 background: #ebecee;
                 position: absolute;
             }
+           .main-menu-x {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.6rem;
+    z-index: 50;
+    color: white;
+    font-size: 2.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
             .corner {
                 display: block;
                 position: absolute;
@@ -2214,6 +2226,15 @@
                 titleVideo.currentTime = 0;
                 titleVideo.play();
             });
+           document.querySelectorAll('.content.full').forEach(function(section) {
+    if (!section.querySelector('.main-menu-x')) {
+        const closeButton = document.createElement('a');
+        closeButton.href = '#';
+        closeButton.className = 'main-menu-x';
+        closeButton.innerHTML = '&times;';
+        section.appendChild(closeButton);
+    }
+});
         </script>
     </body>
 </html>
